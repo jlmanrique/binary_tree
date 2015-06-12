@@ -91,10 +91,10 @@ Arbol_Binario.prototype.encontrar = function(valor){
 
 Arbol_Binario.prototype.altura = function() {
   
-  var altura = 0;
+  var altura = null;
   if (this.valor != null){
     if (this.arbol_izquierdo == null && this.arbol_derecho==null){
-      altura = 1;
+      altura = 0;
     } else {
       var altura_izquierda = 0;
       var altura_derecha = 0;

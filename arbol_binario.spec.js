@@ -85,19 +85,19 @@ describe('Arboles Binarios', function() {
 
   it('para un arbol vacio la altura del arbol es 0', function() {
      
-     expect(arbol.altura()).toBe(0);
+     expect(arbol.altura()).toBeNull(null);
   });
 
   it('para un arbol con un elemento la altura del arbol es 1', function() {
      
      arbol.agregar(40);
-     expect(arbol.altura()).toBe(1);
+     expect(arbol.altura()).toBe(0);
   });
 
   it('para un arbol con cuatro elementos la altura del arbol es el 1 mas el maximo de las alturas de la izquierda y derecha', function() {
      
      arbol.agregar(40).agregar(10).agregar(60).agregar(7);
-     expect(arbol.altura()).toBe(3);
+     expect(arbol.altura()).toBe(2);
   });  
 
 });
