@@ -89,6 +89,32 @@ Arbol_Binario.prototype.encontrar = function(valor){
   return retorno;
 }
 
+Arbol_Binario.prototype.altura = function() {
+  
+  var altura = 0;
+  if (this.valor != null){
+    if (this.arbol_izquierdo == null && this.arbol_derecho==null){
+      altura = 1;
+    } else {
+      var altura_izquierda = 0;
+      var altura_derecha = 0;
+      if (this.arbol_izquierdo != null){
+        altura_izquierda = this.arbol_izquierdo.altura();
+      }
+      if (this.arbol_derecho != null){
+        altura_derecha = this.arbol_derecho.altura();
+      }
+      if (altura_izquierda >= altura_derecha){
+        altura = altura_izquierda;
+      } else {
+        altura = altura_derecha;
+      }
+      altura= altura +1;
+    }
+  }
+  return altura;
+};
+
 Arbol_Binario.prototype.limpiar = function(){
   this.valor = null;
   this.arbol_izquierdo = null;
